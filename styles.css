@@ -1,0 +1,40 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+h1{
+    color: white;
+    line-height: 1;
+    letter-spacing: 0.211em;
+    font-size: 34px;
+}
+.bg-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    object-fit: fill;
+    z-index: -1;
+    filter: brightness(30%);
+}
+header{
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.preloader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: white;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transition: 2s linear;
+}
