@@ -10,7 +10,6 @@ btn.addEventListener("click",()=>{
         btn.classList.remove("pause");
         btn.classList.add("play");
         video.play();
-        debugger;
         fa.classList.remove("fa-play");
         fa.classList.add("fa-pause");
 
