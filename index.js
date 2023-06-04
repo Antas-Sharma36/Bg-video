@@ -1,30 +1,28 @@
 const btn = document.querySelector(".btn");
 const video = document.querySelector(".bg_video");
-const fa = document.querySelector(".fa-solid");
+const fa = document.querySelector(".fa");
 
 btn.addEventListener("click",()=>{
-    console.log(btn.classList.values);
-    if ( btn.classList.contains("pause") ){
+
+// if video is paused -          
+    if ( !(btn.classList.contains("play")) || btn.classList.contains("pause")){
+
         btn.classList.remove("pause");
+        btn.classList.add("play");
         video.play();
-        fa.classList.add("fa-pause");
+        debugger;
         fa.classList.remove("fa-play");
-        console.log("Playing");
-    } else if (  !(btn.classList.contains("pause") || btn.classList.contains("play")) ){
-        video.play();
-        console.log(btn.classList.value);
-        fa.classList.remove("play");
-        
-        fa.classList.add("pause");
-        console.log(btn.classList.value);
-        
-        
-    } 
-    else {
+        fa.classList.add("fa-pause");
+
+
+    } else {
+
+// if video is playing -   
+
         btn.classList.add("pause");
-        video.pause();
+        video.pause(); 
         fa.classList.remove("fa-pause");
         fa.classList.add("fa-play");
-        console.log("Pausing");
-    } 
+        console.log("b");
+    }
 })
